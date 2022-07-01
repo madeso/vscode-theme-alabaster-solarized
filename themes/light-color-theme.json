@@ -90,36 +90,8 @@
 
 	"tokenColors": [
 		{
-			"name": "Comments",
-			"scope": [
-				"comment",
-				"punctuation.definition.comment"
-			],
-			"settings": {
-				"foreground": "#000"
-			}
-		},
-		{
-			"name": "Strings",
-			"scope": [
-				//  - meta.preprocessor.include
-				"string",
-				"string.regexp",
-				"constant.other.symbol"
-			],
-			"settings": {
-				"foreground": "#b58900"
-			}
-		},
-		{
-			"name": "Strings: Escape Sequences",
-			"scope": "constant.character.escape",
-			"settings": {
-				"foreground": "#cb4b16"
-			}
-		},
-		{
-			"name": "Numbers, Characters",
+			"name": "Compile-time constants",
+			// numbers, booleans, true/false
 			"scope": [
 				"constant.numeric",
 				"constant.character",
@@ -127,29 +99,80 @@
 				"constant"
 			],
 			"settings": {
-				"foreground": "#268bd2"
+				"foreground": "#cb4b16"
 			}
 		},
+
+
 		{
-			"name": "Global definitions",
+			"name": "String-like",
+			// string, regexp, characters
+			"scope": [
+				//  - meta.preprocessor.include
+				"string",
+				"string.regexp",
+				"constant.other.symbol"
+			],
+			"settings": {
+				"foreground": "#859900"
+			}
+		},
+
+
+		{
+			"name": "Strings: Escape Sequences",
+			"scope": "constant.character.escape",
+			"settings": {
+				"foreground": "#586e75"
+			}
+		},
+
+
+		{
+			"name": "Declarations",
+			// top level definition of classes, functions, namespaces...
 			"scope":
 			[
 				// - entity.name.function.call
 				// - entity.name.function.member
 				// - meta.function-call.(ts,js,c)
 				"entity.name.function"
+
+				// - entity.type.parameter
+				// - meta.body.struct
+				, "entity.name.type"
+
+				// - entity.name.scope-resolition
+				, "entity.name.namespace"
 				, "entity.name.scope-resolution.function.definition"
 				, "entity.global"
 			],
 			"settings": {
-				"foreground": "#6c71c4"
+				"foreground": "#268bd2"
 			}
 		},
+
+
+		{
+			"name": "Comments",
+			"scope": [
+				"comment",
+				"punctuation.definition.comment"
+			],
+			"settings": {
+				// optionally use emphasized here: 586e75
+				// but I don't think it pops enough
+				"foreground": "#000"
+			}
+		},
+
+
+		
 		{
 			"name": "Punctuation",
 			"scope": "punctuation",
 			"settings": {
-				"foreground": "#2aa198"
+				"foreground": "#93a1a1"
 			}
 		},
 		{
