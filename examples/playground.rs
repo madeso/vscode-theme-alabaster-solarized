@@ -6,8 +6,8 @@ struct E { e1: D, e2: D}
 union F { e1: D, e2: D}
 type G = E;
 
-trait H { fn h () -> (); }
-impl H for E { fn h () -> () { /* */ }; }
+trait H { fn h() -> (); }
+impl H for E { fn h() -> () { /* */ }; }
 
 fn i () -> () { }
 

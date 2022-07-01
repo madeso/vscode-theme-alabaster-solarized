@@ -38,6 +38,10 @@
 #include "editor/editor_node.h"
 #endif // TOOLS_ENABLED
 
+namespace foobar::dog
+{
+}
+
 bool PropertyUtils::is_property_value_different(const Variant &p_a, const Variant &p_b) {
 	if (p_a.get_type() == Variant::FLOAT && p_b.get_type() == Variant::FLOAT) {
 		//this must be done because, as some scenes save as text, there might be a tiny difference in floats due to numerical error
