@@ -1,0 +1,28 @@
+{
+    "name": "alabaster-solarized",
+    "displayName": "Solarized alabaster",
+    "description": "Alabaster (solarized)",
+    "version": "0.0.1",
+    "license": "MIT",
+    "engines": {
+        "vscode": "^1.68.0"
+    },
+    "keywords": [
+        "alabaster",
+        "solarized",
+        "dark",
+        "light"
+    ],
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Alabaster Solarized (light)",
+                "uiTheme": "vs",
+                "path": "./themes/light-color-theme.json"
+            }
+        ]
+    }
+}
